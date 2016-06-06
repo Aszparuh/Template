@@ -1,4 +1,4 @@
-﻿namespace Movies.Web.Models
+﻿namespace Movies.Web.ViewModels.Account
 {
     using System.ComponentModel.DataAnnotations;
 

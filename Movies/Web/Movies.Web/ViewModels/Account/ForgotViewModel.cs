@@ -1,8 +1,8 @@
-﻿namespace Movies.Web.Models
+﻿namespace Movies.Web.ViewModels.Account
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class ExternalLoginConfirmationViewModel
+    public class ForgotViewModel
     {
         [Required]
         [Display(Name = "Email")]
