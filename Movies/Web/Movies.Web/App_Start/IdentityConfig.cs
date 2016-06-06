@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using Movies.Web.Models;
+using Movies.Web.ViewModels;
 
 namespace Movies.Web
 {
