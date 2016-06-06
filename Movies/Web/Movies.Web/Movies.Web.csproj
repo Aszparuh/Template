@@ -182,7 +182,8 @@
     <Compile Include="ViewModels\Account\ExternalLoginListViewModel.cs" />
     <Compile Include="ViewModels\Account\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\ForgotViewModel.cs" />
-    <Compile Include="ViewModels\IdentityModels.cs" />
+    <Compile Include="ViewModels\ApplicationDbContext.cs" />
+    <Compile Include="ViewModels\ApplicationUser.cs" />
     <Compile Include="ViewModels\Account\LoginViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Manage\ChangePasswordViewModel.cs" />
@@ -280,6 +281,16 @@
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Movies.Data.Models\Movies.Data.Models.csproj">
+      <Project>{e8cd3d5f-4df5-4466-8bc0-c325d6e09614}</Project>
+      <Name>Movies.Data.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Movies.Data\Movies.Data.csproj">
+      <Project>{187e8997-fef3-40e0-9e9b-d4651c45952e}</Project>
+      <Name>Movies.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
