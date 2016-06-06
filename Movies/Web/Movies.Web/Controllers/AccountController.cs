@@ -1,9 +1,6 @@
 ﻿namespace Movies.Web.Controllers
 {
-    using System;
-    using System.Globalization;
     using System.Linq;
-    using System.Security.Claims;
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Mvc;
@@ -54,6 +51,14 @@
             private set
             {
                 this.userManager = value;
+            }
+        }
+
+        private IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return this.HttpContext.GetOwinContext().Authentication;
             }
         }
 
@@ -415,14 +420,6 @@
             }
 
             base.Dispose(disposing);
-        }
-
-        private IAuthenticationManager AuthenticationManager
-        {
-            get
-            {
-                return this.HttpContext.GetOwinContext().Authentication;
-            }
         }
 
         private void AddErrors(IdentityResult result)

@@ -1,6 +1,5 @@
 ﻿namespace Movies.Web.Controllers
 {
-    using System;
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web;
@@ -28,6 +27,17 @@
             this.SignInManager = signInManager;
         }
 
+        public enum ManageMessageId
+        {
+            AddPhoneSuccess,
+            ChangePasswordSuccess,
+            SetTwoFactorSuccess,
+            SetPasswordSuccess,
+            RemoveLoginSuccess,
+            RemovePhoneSuccess,
+            Error
+        }
+
         public ApplicationSignInManager SignInManager
         {
             get
@@ -51,6 +61,14 @@
             private set
             {
                 this.userManager = value;
+            }
+        }
+
+        private IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return this.HttpContext.GetOwinContext().Authentication;
             }
         }
 
@@ -340,14 +358,6 @@
             base.Dispose(disposing);
         }
 
-        private IAuthenticationManager AuthenticationManager
-        {
-            get
-            {
-                return this.HttpContext.GetOwinContext().Authentication;
-            }
-        }
-
         private void AddErrors(IdentityResult result)
         {
             foreach (var error in result.Errors)
@@ -376,17 +386,6 @@
             }
 
             return false;
-        }
-
-        public enum ManageMessageId
-        {
-            AddPhoneSuccess,
-            ChangePasswordSuccess,
-            SetTwoFactorSuccess,
-            SetPasswordSuccess,
-            RemoveLoginSuccess,
-            RemovePhoneSuccess,
-            Error
         }
     }
 }
