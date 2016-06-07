@@ -313,6 +313,10 @@
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Data\Movies.Data.Common\Movies.Data.Common.csproj">
+      <Project>{EE64578D-5EC9-4430-AB4D-2F578D41BD54}</Project>
+      <Name>Movies.Data.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\Movies.Data.Models\Movies.Data.Models.csproj">
       <Project>{e8cd3d5f-4df5-4466-8bc0-c325d6e09614}</Project>
       <Name>Movies.Data.Models</Name>
